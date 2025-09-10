@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miliris - Peluquería por Yohana Córdoba</title>
     <style>
-         /* Estilos generales */
+        /* Estilos generales */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -31,11 +31,10 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        /* --- Estilo del logo y el encabezado para centrarlo --- */
         .header-content {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centra el contenido horizontalmente */
+            align-items: center;
             gap: 10px;
         }
         
@@ -45,9 +44,8 @@
         }
         
         .header-text {
-            text-align: center; /* Centra el texto */
+            text-align: center;
         }
-        /* -------------------------------------------------------- */
 
         header h1 {
             margin: 0;
@@ -104,14 +102,12 @@
             backdrop-filter: blur(5px);
         }
 
-        /* --- Nuevo tamaño de fuente para el título del hero (aún más pequeño) --- */
         .hero h2 {
-            font-size: 2.2rem; /* Tamaño de fuente ajustado nuevamente */
+            font-size: 2.2rem;
             margin: 0;
             color: #fff;
             text-shadow: 3px 3px 5px rgba(0,0,0,0.7);
         }
-        /* -------------------------------------------------------- */
 
         .hero p {
             font-size: 1.8rem;
@@ -193,6 +189,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative; /* Necesario para posicionar el texto interno */
+            overflow: hidden;
         }
         
         .gallery-item:hover {
@@ -206,8 +204,27 @@
             object-fit: cover;
             border-radius: 5px;
             margin-bottom: 10px;
+            display: block;
         }
         
+        /* Estilos para el texto de título dentro de la imagen */
+        .image-caption {
+            position: absolute; /* Posiciona el texto sobre la imagen */
+            bottom: 25px; /* Ajusta la distancia desde abajo del marco */
+            left: 50%; /* Centra horizontalmente */
+            transform: translateX(-50%); /* Ajuste final para centrar */
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: #6a053c; /* Color de texto morado oscuro */
+            font-size: 1.2rem; /* Tamaño de fuente */
+            font-weight: bold;
+            font-style: italic; /* Estilo cursiva */
+            text-align: center;
+            white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil */
+        }
+
         .photo-title {
             font-size: 1.1rem;
             color: #6a053c;
@@ -347,4 +364,5 @@
 
 </body>
 </html>
+
 
